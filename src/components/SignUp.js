@@ -57,7 +57,7 @@ class SignUp extends Component {
   }
 
   loginSuccesRender = (
-    <div>
+    <div className="estaConectado">
       <p>Thank you, you are now a member!</p>
       <Link to="/logIn">
         <p>Log in</p>
@@ -112,7 +112,7 @@ class SignUp extends Component {
                 <input
                   type="password"
                   id="passwordRepeat"
-                  placeholder="Enter your password again"
+                  placeholder="Repeat password"
                   name="passwordRepeat"
                   value={this.state.passwordRepeat}
                   onChange={this.handleChange}

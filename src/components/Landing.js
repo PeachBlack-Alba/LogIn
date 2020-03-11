@@ -23,16 +23,14 @@ class Landing extends Component {
             <div className="FormCenter">
               <p>Hello, hello, hello! This is your data:</p>
               <div>
-                <label htmlFor="usename">User Name: </label>
-                <input type="text" value={this.props.logIn.user.username} />
-              </div>
-              <div>
-                <label htmlFor="usename">User Email: </label>
-                <input type="text" value={this.props.logIn.user.email} />
-              </div>
-              <div>
-                <label htmlFor="usename">User Id: </label>
-                <input type="text" value={this.props.logIn.user.id} />
+                <dl className="data">
+                  <dt>User Name:</dt>
+                  <dd>{this.props.logIn.user.username}</dd>
+                  <dt>User Email: </dt>
+                  <dd>{this.props.logIn.user.email} </dd>
+                  <dt>User Id: </dt>
+                  <dd>value={this.props.logIn.user.id}</dd>
+                </dl>
               </div>
             </div>
             <button className="salir" onClick={e => this.handleLogOut(e)}>
