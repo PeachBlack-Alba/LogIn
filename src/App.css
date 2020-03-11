@@ -29,6 +29,8 @@ h1 {
   font-size: 50px;
   color: #d59bf6;
   text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .landingContent {
   position: absolute;
