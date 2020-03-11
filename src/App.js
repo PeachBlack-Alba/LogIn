@@ -1,12 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Landing from "./components/Landing";
+import SignUp from "./components/SignUp";
+import LogIn from "./components/LogIn";
 import "./App.css";
+import { loginSuccess } from "./store/actions/LogInActions";
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>App log in log out</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/SignUp" component={SignUp} />
+            <Route exact path="/LogIn" component={LogIn} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return state;
+};
+const mapDispatchToProps = dispatch => ({
+  loginSuccess: token => dispatch(loginSuccess(token))
+});
+export default connect(mapStateToProps, mapDispatchToProps)(App);

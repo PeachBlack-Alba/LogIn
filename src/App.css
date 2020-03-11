@@ -10,3 +10,43 @@ body {
   font-size: small;
   line-height: 1.4;
 }
+
+/******************Landing Page*******************/
+.a {
+  color: #009e4f;
+}
+.b {
+  color: #00aac3;
+}
+.c {
+  color: #732982;
+}
+
+.landingContent {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  left: 10%;
+  top: 10%;
+  margin-top: 100px;
+}
+
+.p_landing {
+  padding-bottom: 40px;
+}
+
+.start {
+  background-color: #ff48c4;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin: 20px;
+}
+
+.helloName {
+  text-align: center;
+  color: black;
+  margin-top: 30px;
+  font-size: medium;
+}
