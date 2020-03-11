@@ -2,9 +2,19 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
+import { logOutAction } from "../store/actions/LogInActions";
 
 class Landing extends Component {
+  handleLogOut(e) {
+    console.log("in handle logout");
+    e.preventDefault();
+    this.props.logOutAction();
+    this.props.history.push("/");
+    console.log("this.props.isLoggedIn", this.props.isLoggedIn);
+  }
+
   render() {
+    console.log(this.props.logIn);
     return (
       <div className="landingContent">
         <div className="">
@@ -18,9 +28,16 @@ class Landing extends Component {
           <p className="p_landing">Log in and out or sign up!</p>
 
           {this.props.logIn.isLoggedIn ? (
-            <p className="helloName">
-              Hello, hello, hello! {this.props.logIn.user.username}
-            </p>
+            <div>
+              <p className="helloName">
+                Hello, hello, hello! {this.props.logIn.user.username}
+                {this.props.logIn.user.email}
+                {this.props.logIn.user.id}
+              </p>
+              <button className="logout" onClick={e => this.handleLogOut(e)}>
+                Log Out
+              </button>
+            </div>
           ) : (
             <div className="container text-center">
               <Link to="/signUp" className="start">
@@ -45,4 +62,12 @@ const mapStateToProps = state => {
     user: state.user
   };
 };
-export default connect(mapStateToProps)(Landing);
+
+const mapdispatchToProps = dispatch => {
+  return {
+    logOutAction: () => {
+      dispatch(logOutAction());
+    }
+  };
+};
+export default connect(mapStateToProps, mapdispatchToProps)(Landing);

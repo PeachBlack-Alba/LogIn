@@ -121,7 +121,7 @@ class SignUp extends Component {
                   Repeat Password
                 </label>
                 <input
-                  type="passwordRepeat"
+                  type="password"
                   id="passwordRepeat"
                   className="FormField__Input"
                   placeholder="Enter your password again"

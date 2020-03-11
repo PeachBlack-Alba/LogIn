@@ -8,6 +8,16 @@ import { loginSuccess } from "./store/actions/LogInActions";
 import { connect } from "react-redux";
 
 class App extends Component {
+  checkIfUserIsLoggedIn() {
+    const token = localStorage.getItem("token");
+    if (token !== null) {
+      this.props.loginSuccess(token);
+      // } else if (window.location.replace("/")) {
+    }
+  }
+  componentDidMount() {
+    this.checkIfUserIsLoggedIn();
+  }
   render() {
     return (
       <BrowserRouter>
