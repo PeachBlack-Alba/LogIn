@@ -9,7 +9,7 @@ const initialState = {
   message: ""
 };
 export default (state = initialState, action) => {
-  console.log(action); // switch is like (if/else) and then we code all the scenarios
+  // switch is like (if/else) and then we code all the scenarios
   switch (action.type) {
     case FETCH_LOGIN_SUCCESS:
       return {

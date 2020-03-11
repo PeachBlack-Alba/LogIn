@@ -7,8 +7,6 @@ import Axios from "axios";
 export default function signUpUser(user) {
   // takes the user information from the signup component
   return dispatch => {
-    console.log("signUpUser");
-    console.log(user);
     Axios.post("https://pixsyassigment.herokuapp.com/signUp/", {
       // passing information from user to the req.body
       picture: user.picture,
@@ -20,11 +18,9 @@ export default function signUpUser(user) {
       isError: user.isError
     })
       .then(res => {
-        console.log(res);
         dispatch(signUpSuccess(res.data));
       })
       .catch(err => {
-        console.log(err);
         dispatch(signUpFail(err));
       });
   };

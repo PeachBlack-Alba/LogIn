@@ -30,15 +30,14 @@ class SignUp extends Component {
       // set user information in the state
       [name]: value
     });
-    console.log(this.state);
   }
 
   handleSubmit(e) {
     // when we have all the information in the state we want to pass it to the back end
     e.preventDefault(); // stops the page from refreshing on submit
-    console.log("handleSubmit");
+
     const user = this.state;
-    console.log(user);
+
     if (
       user.username !== "" &&
       user.password !== "" &&

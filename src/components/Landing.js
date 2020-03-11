@@ -3,19 +3,15 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { logOutAction } from "../store/actions/LogInActions";
-import inicio from "../images/inicio.png";
 
 class Landing extends Component {
   handleLogOut(e) {
-    console.log("in handle logout");
     e.preventDefault();
     this.props.logOutAction();
     this.props.history.push("/");
-    console.log("this.props.isLoggedIn", this.props.isLoggedIn);
   }
 
   render() {
-    console.log(this.props.logIn);
     return (
       <div className="landingContent">
         {this.props.logIn.isLoggedIn ? (
@@ -64,7 +60,6 @@ class Landing extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log(state);
   return {
     logIn: state.logIn,
     error: state.error,

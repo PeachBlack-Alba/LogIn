@@ -13,10 +13,8 @@ const initialState = {
   isError: false
 };
 export default (state = initialState, action) => {
-  console.log(action.payload);
   switch (action.type) {
     case FETCH_SIGNUP_SUCCESS:
-      console.log("you are now a member");
       return {
         ...state,
         isSignUp: true,

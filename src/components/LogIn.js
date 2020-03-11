@@ -26,24 +26,18 @@ class LogIn extends Component {
     let value = target.value;
     let name = target.name; // name attribute of the input, so we know what changes if the email or the password
     // whenever the input change we restate the state :
-    console.log(value);
-    console.log(name);
+
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(this.state);
   }
 
   handleSubmit(e) {
     e.preventDefault();
 
-    console.log("The data is:");
-    console.log(this.state);
-    console.log("handleSubmit");
     const user = this.state;
-    console.log(user);
+
     if (!this.state.email || !this.state.password) {
-      console.log("missing fields");
       this.setState({
         error: true,
         error: "All fields must be field"
@@ -59,12 +53,10 @@ class LogIn extends Component {
   }
 
   logInRender() {
-    console.log("this.state.token", this.state.token);
     this.props.history.push("/");
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         {this.props.logIn.isLoggedIn ? (
@@ -109,7 +101,6 @@ class LogIn extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log(state);
   return {
     logIn: state.logIn,
     error: state.error,
