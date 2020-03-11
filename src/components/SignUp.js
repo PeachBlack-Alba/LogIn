@@ -40,22 +40,20 @@ class SignUp extends Component {
     const user = this.state;
     console.log(user);
     if (
-      (user.username !== "" ||
-        user.password !== "" ||
-        user.passwordRepeat !== "" ||
-        user.email !== "") &&
-      user.passwordRepeat === user.password
+      user.username !== "" &&
+      user.password !== "" &&
+      user.passwordRepeat !== "" &&
+      user.email !== ""
     ) {
-      this.props.signUpUser(user);
-      this.setState({ logginSuccess: true });
+      if (user.passwordRepeat !== user.password) {
+        alert("Your password are not matching");
+      } else {
+        this.props.signUpUser(user);
+        this.setState({ logginSuccess: true });
+      }
     } else {
-      alert("You missed a field or your password does not match");
+      alert("You missed a field");
     }
-    // if (user.passwordRepeat === user.password) {
-    //
-    // } else {
-    //   alert("Your password are not matching");
-    // }
   }
 
   loginSuccesRender = (
