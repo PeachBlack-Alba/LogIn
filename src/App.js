@@ -12,7 +12,6 @@ class App extends Component {
     const token = localStorage.getItem("token");
     if (token !== null) {
       this.props.loginSuccess(token);
-      // } else if (window.location.replace("/")) {
     }
   }
   componentDidMount() {
