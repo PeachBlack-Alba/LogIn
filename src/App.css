@@ -29,6 +29,8 @@ body {
 
 h1 {
   font-size: 50px;
+  color: #d59bf6;
+  text-align: center;
 }
 .landingContent {
   position: absolute;
@@ -41,6 +43,7 @@ h1 {
 
 .p_landing {
   padding-bottom: 40px;
+  text-align: center;
 }
 
 .start {
@@ -59,16 +62,31 @@ h1 {
   font-size: medium;
 }
 
+/****************Landing page if connected*****************/
+
+.estaConectado {
+  width: 350px;
+  min-height: 450px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 10%;
+  background-image: linear-gradient(-225deg, #e3fdf5 50%, #ffe6fa 50%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 /**************SignUp Form***********/
 
 .FormCenter {
-  width: 300px;
-  min-height: 400px;
+  width: 350px;
+  min-height: 450px;
   height: auto;
   border-radius: 5px;
-  margin: 2% auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-  padding: 2%;
+  padding: 10%;
   background-image: linear-gradient(-225deg, #e3fdf5 50%, #ffe6fa 50%);
   display: flex;
   justify-content: space-around;
@@ -82,12 +100,28 @@ h1 {
   min-height: 400px;
   height: auto;
   border-radius: 5px;
-  margin: 2% auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-  padding: 2%;
+  padding: 10%;
   background-image: linear-gradient(-225deg, #e3fdf5 50%, #ffe6fa 50%);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+/*********************Footer********************/
+.footer {
+  margin-left: 23%;
+  margin-top: 10%;
+}
+
+.salir {
+  background-color: #d59bf6;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin: 20px;
+  margin-left: 23%;
+  margin-top: 10%;
 }

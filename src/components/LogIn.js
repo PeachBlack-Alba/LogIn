@@ -61,16 +61,6 @@ class LogIn extends Component {
   logInRender() {
     console.log("this.state.token", this.state.token);
     this.props.history.push("/");
-
-    //   return (
-    //     // <div>
-    //     //   <h1>Welcome to the LogMEApp {this.state.username}</h1>
-
-    //     //   <Link to="/" className="inicio">
-    //     //     <img className="homeButton" alt="home"></img>
-    //     //   </Link>
-    //     // </div>
-    //   // );
   }
 
   render() {
@@ -83,39 +73,30 @@ class LogIn extends Component {
           <React.Fragment>
             <h1>Log In</h1>
             <div className="LogInCompeto">
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="email">
-                  Email adress
-                </label>
+              <div>
+                <label htmlFor="email">Email adress</label>
                 <input
                   type="email"
                   id="name"
-                  className="FormField__Input"
                   placeholder="Enter your email adress"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">
-                  Password
-                </label>
+              <div>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   id="password"
-                  className="FormField__Input"
                   placeholder="Enter your password"
                   name="password"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="FormField">
-                <button
-                  className="FormField__Button mr-20"
-                  onClick={this.handleSubmit}
-                >
+              <div>
+                <button className="start" onClick={this.handleSubmit}>
                   Log In
                 </button>{" "}
               </div>

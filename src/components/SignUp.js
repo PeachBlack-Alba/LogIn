@@ -73,57 +73,45 @@ class SignUp extends Component {
           this.loginSuccesRender
         ) : (
           <div className="FormCenter">
-            <form className="FormFields">
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="name">
-                  User Name
-                </label>
+            <form>
+              <div>
+                <label htmlFor="name">User Name</label>
                 <input
                   type="text"
                   id="name"
-                  className="FormField__Input"
                   placeholder="Enter your User Name"
                   name="username"
                   value={this.state.username}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="email">
-                  Email adress
-                </label>
+              <div>
+                <label htmlFor="email">Email adress</label>
                 <input
                   type="email"
                   id="name"
-                  className="FormField__Input"
                   placeholder="Enter your email adress"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">
-                  Password
-                </label>
+              <div>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   id="password"
-                  className="FormField__Input"
                   placeholder="Enter your password"
                   name="password"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">
-                  Repeat Password
-                </label>
+              <div>
+                <label htmlFor="password">Repeat Password</label>
                 <input
                   type="password"
                   id="passwordRepeat"
-                  className="FormField__Input"
                   placeholder="Enter your password again"
                   name="passwordRepeat"
                   value={this.state.passwordRepeat}
@@ -131,11 +119,8 @@ class SignUp extends Component {
                 />
               </div>
 
-              <div className="FormField">
-                <button
-                  className="FormField__Button mr-20"
-                  onClick={this.handleSubmit}
-                >
+              <div>
+                <button className="start" onClick={this.handleSubmit}>
                   Create Account
                 </button>
               </div>

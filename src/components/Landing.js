@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import { logOutAction } from "../store/actions/LogInActions";
+import inicio from "../images/inicio.png";
 
 class Landing extends Component {
   handleLogOut(e) {
@@ -29,12 +30,22 @@ class Landing extends Component {
 
           {this.props.logIn.isLoggedIn ? (
             <div>
-              <p className="helloName">
-                Hello, hello, hello! {this.props.logIn.user.username}
-                {this.props.logIn.user.email}
-                {this.props.logIn.user.id}
-              </p>
-              <button className="logout" onClick={e => this.handleLogOut(e)}>
+              <div className="FormCenter">
+                <p>Hello, hello, hello!</p>
+                <div>
+                  <label htmlFor="usename">User Name: </label>
+                  <input type="text" value={this.props.logIn.user.username} />
+                </div>
+                <div>
+                  <label htmlFor="usename">User Email: </label>
+                  <input type="text" value={this.props.logIn.user.email} />
+                </div>
+                <div>
+                  <label htmlFor="usename">User Id: </label>
+                  <input type="text" value={this.props.logIn.user.id} />
+                </div>
+              </div>
+              <button className="salir" onClick={e => this.handleLogOut(e)}>
                 Log Out
               </button>
             </div>
