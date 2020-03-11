@@ -60,7 +60,7 @@ class SignUp extends Component {
     <div className="estaConectado">
       <p>Thank you, you are now a member!</p>
       <Link to="/logIn">
-        <p>Log in</p>
+        <button className="start">Log in</button>
       </Link>
     </div>
   );
